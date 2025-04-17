@@ -7,6 +7,8 @@ const { createUser, Philanthropist } = require("./models/philanthropists.js");
 const Hospitals = require("./models/hospitals.js");
 const getGeocode = require("./../externalApi/geocoding.js");
 const blood_comp = require("./util/compatible_blood_types.js");
+const cors = require("cors");
+app.use(cors());
 
 app.post("/adddonor", async (req, res) => {
   try {
